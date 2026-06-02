@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historieta del Gatito y las Mariposas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .comic-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 4px solid #333333;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333333;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .comic-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        /* Estilo para cada viñeta individual */
+        .vinyeta1 {
+            border: 3px solid #222222;
+            overflow: hidden;
+            background-color: #eaf6ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            transition: transform 0.2s ease;
+        }
+
+        .vinyeta:hover {
+            transform: scale(1.02);
+            z-index: 10;
+        }
+
+        .vinyeta img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        @media (max-width: 600px) {
+            .comic-grid {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="comic-container">
+        <h1>Una tarde en el jardín</h1>
+        
+        <div class="comic-grid">
+            <div class="vinyeta1">
+                <img src="https://1drv.ms/i/c/1d1ea9ce99bd9723/IQDiQyltw15nSock8-lLku7iAYqYvzIUQUXgEkQaMI3nEdw?e=eN2DBv" alt="Gatito mirando las hermosas mariposas">
+            </div>
+
+            <div class="vinyeta">
+                <img src="viñeta2.png" alt="Gatito aburrido deseando jugar">
+            </div>
+
+            <div class="vinyeta">
+                <img src="https://drive.google.com/file/d/1LSOTCwlVPSuDDZfF7boLUNreWYq9tER4/view" alt="Mariposas decidiendo acercarse">
+            </div>
+
+            <div class="vinyeta">
+                <img src="viñeta4.png" alt="Gatito feliz jugando con las mariposas">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
